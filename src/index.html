@@ -8,28 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Скорочтение</h1>
-        <p class="text">Это приложение для тестирования и улучшения навыков скорочтения. Оно предоставляет вам тексты, которые нужно прочитать и понять (ведь именно в этом смысл скорочтения)</p>
-        <div class="speed-buttons">
-          <button class="speed-button" data-speed="1000">1x</button>
-          <button class="speed-button" data-speed="500">2x</button>
-          <button class="speed-button" data-speed="250">4x</button>
-          <button class="speed-button" data-speed="100">10x</button>
-          <button class="speed-button" data-speed="50">20x</button>
-        </div>
-        <button class="start-button">Старт</button>
-        <button class="stop-button">Стоп</button>
-        <div class="word-container"></div>
-        <div class="stats-container">
-          <span class="words-read">0</span> слов прочитано
-          <br>
-          <span class="wpm">0</span> слов в минуту
-        </div>
-        <div class="timer-container">
-          <span class="timer">0:00</span>
-        </div>
-      </div>
+  <div class="form-group">
+    <label id="speed-label" for="speed">Скорость (WPM):</label>
+    <select id="speed" class="form-control">
+      <option value="100">100</option>
+      <option value="200">200</option>
+      <option value="300">300</option>
+      <option value="400">400</option>
+      <option value="500">500</option>
+      <option value="600">600</option>
+      <option value="700">700</option>
+      <option value="800">800</option>
+    </select>
+  </div>
+  
+  <div class="button-group">
+    <button id="start" class="btn btn-primary">Старт</button>
+    <button id="stop" class="btn btn-secondary">Стоп</button>
+    <button id="clear" class="btn btn-danger">Очистить</button>
+    <button id="toggle" class="btn btn-info">Следующий текст</button>
+  </div>
+  
+  <div id="text" class="text-container"></div>
+  
+  <div class="timer-group">
+    <span id="timer" class="timer">Время: 0 секунд</span>
+    <span id="count" class="counter"></span>
+  </div>
 </body>
 <script src="/src/script.js"></script>
 </html>

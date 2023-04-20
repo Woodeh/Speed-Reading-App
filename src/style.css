@@ -39,6 +39,7 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    margin-bottom: 20px;
   }
   
   .start-button:hover, .stop-button:hover {
@@ -66,4 +67,46 @@
     border-radius: 0.5rem;
     background-color: #f44336;
     color: #fff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .speed-buttons {
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+  
+    .speed-button {
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .start-button, .stop-button {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .word-container {
+      font-size: 1.5rem;
+    }
+  
+    .stats-container {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .timer-container {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .timer {
+      font-size: 1.2rem;
+      padding: 0.25rem;
+    }
   }

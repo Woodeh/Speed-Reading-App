@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Скорость чтения</h1>
+        <div class="speed-buttons">
+          <button class="speed-button" data-speed="1000">1x</button>
+          <button class="speed-button" data-speed="500">2x</button>
+          <button class="speed-button" data-speed="250">4x</button>
+          <button class="speed-button" data-speed="100">10x</button>
+        </div>
+        <button class="start-button">Старт</button>
+        <button class="stop-button">Стоп</button>
+        <div class="word-container"></div>
+        <div class="stats-container">
+          <span class="words-read">0</span> слов прочитано
+          <br>
+          <span class="wpm">0</span> слов в минуту
+        </div>
+        <div class="timer-container">
+          <span class="timer">0:00</span>
+        </div>
+      </div>
+</body>
+<script src="/src/script.js"></script>
+</html>

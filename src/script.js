@@ -8,7 +8,15 @@ let countdownIntervalId;
 let countdownValue = 3;
 
 const texts = ["скорочтение это навык быстрого чтения который позволяет прочитывать тексты на порядок быстрее чем обычным чтением люди обладающие этим навыком могут значительно увеличить свою производительность получить больше информации за короткий промежуток времени и улучшить свои умственные способности одним из главных принципов скорочтения является отказ от подсознательного замедления чтения голосом или произнесением слов в уме вместо этого скорочтец фокусируется на группах слов и предложений а не на каждом слове по отдельности одним из способов развития навыка скорочтения является увеличение скорости чтения путем уменьшения количества времени затрачиваемого на чтение каждой страницы другим способом является тренировка в восприятии групп слов улучшение внимания и скорости реакции на изменения в тексте тренировки скорочтения могут включать в себя использование специальных техник и упражнений таких как сканирование текста чтение с помощью периферийного зрения и чтение нескольких строк одновременно также можно использовать специальные программы которые помогают тренировать навык скорочтения и увеличивать скорость чтения важно понимать что скорочтение не должно приводить к потере качества восприятия информации скорочтец должен уметь понимать прочитанное и запоминать его так же как и при обычном чтении поэтому необходимо научиться контролировать скорость чтения в зависимости от сложности текста и своих возможностей интересно что некоторые известные люди были скорочтецами например Томас Джефферсон умел читать со скоростью до 1000 слов в минуту а Никола Тесла - до 1200 слов в минуту это позволяло им получать больше знаний и работать более эффективно", 
-"Sit amet consectetur adipiscing elit"];
+"Sit amet consectetur adipiscing elit", "aaa ddd aaa"];
+
+const textTitles = {
+  0: "Скорочтение",
+  1: "Lorem Ipsum",
+  2: "AAA DDD AAA"
+};
+
+
 
 function updateTimer() {
   const currentTime = new Date();
@@ -78,28 +86,50 @@ function clearReading() {
   startTime = new Date();
 }
 
-function toggleText() {
-  currentTextIndex++;
-  if (currentTextIndex >= texts.length) {
-    currentTextIndex = 0;
+function selectText() {
+  const select = document.createElement("select");
+  select.setAttribute("id", "select-text");
+
+  // Добавляем опции выбора текста
+  for (let i = 0; i < texts.length; i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.text = textTitles[i];
+    select.appendChild(option);
   }
-  clearReading();
-  document.getElementById("text").innerText = "";
-  
-  // Создание модального окна
+
+  // Создаем модальное окно
   const modal = document.createElement("div");
   modal.classList.add("modal");
-  const message = document.createElement("p");
-  message.innerText = "Выбран следующий текст!";
-  modal.appendChild(message);
-  document.body.appendChild(modal);
-  
-  // Удаление модального окна через 2 секунды
-  setTimeout(() => {
+  modal.appendChild(select);
+  const button = document.createElement("button");
+  button.innerText = "Выбрать";
+  button.addEventListener("click", () => {
+    currentTextIndex = select.value;
     modal.remove();
-  }, 2000);
+    clearReading();
+    document.getElementById("selected-text").innerText = "Выбран текст: " + textTitles[currentTextIndex];
+    toggleButton.disabled = false; // Разблокировка кнопки toggle
+  });
+  modal.appendChild(button);
+  document.body.appendChild(modal);
+
+  // Удаление модального окна при клике за его пределами
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.remove();
+      toggleButton.disabled = false; // Разблокировка кнопки toggle
+    }
+  });
+
+  const toggleButton = document.getElementById("toggle");
+  toggleButton.disabled = true; // Блокировка кнопки toggle
+  document.getElementById("selected-text").innerText = "Сначала выберите текст";
 }
 
+
+
+document.getElementById("toggle").addEventListener("click", selectText);
 document.getElementById("start").addEventListener("click", () => {
   startCountdown();
 });
@@ -107,9 +137,9 @@ document.getElementById("stop").addEventListener("click", stopReading);
 
 document.getElementById("clear").addEventListener("click", clearReading);
 
-document.getElementById("toggle").addEventListener("click", toggleText);
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("stop").disabled = true;
   document.getElementById("timer").innerText = "Время: 0 секунд";
 });
+

@@ -188,12 +188,18 @@ body {
 
   .text-selector-button {
     color: black;
-    padding: 5px 47px;
+    width: 211px;
+    height: 50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    border-color: #17a2b8;
-    background-color: white;
+    border: none; /* Убираем границы */
+    background-color: transparent; /* Прозрачный фон */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    border-bottom: 1px solid black;
   }
+
+
+  
 
   .text-selector-button:hover {
     background-color:#17a2b8
@@ -217,11 +223,11 @@ body {
 
   .modal {
     position: absolute;
-    left: 77.06%;
-    top: 162.8%;
+    left: 539px;
+    top: 200px;
     background-color: #fff;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -262,12 +268,18 @@ body {
     
     .btn {
     margin-bottom: 10px;
+    width: 250px;
     }
     
     #selected-text {
     bottom: 10px;
     }
     
+    .modal {
+      left: 175px;
+      z-index: 2;
+    }
+
     .text-container {
     max-width: 90%;
     min-height: 60px;

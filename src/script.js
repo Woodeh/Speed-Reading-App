@@ -54,49 +54,73 @@ function startCountdown() {
   }, 1000);
 }
 
-function startReading() {
-  const speed = document.getElementById("speed").value;
-  const words = texts[currentTextIndex].split(" ");
-  currentIndex = 0;
-  startTime = new Date(); 
-  document.getElementById("start").disabled = true;
-  document.getElementById("stop").disabled = false;
-  intervalId = setInterval(() => {
-    if (currentIndex >= words.length) {
-      currentIndex = 0; 
-    }
-    document.getElementById("text").innerText = words[currentIndex++];
-    wordCount++;
-    document.getElementById("count").innerText = `Прочитано слов: ${wordCount}`;
-  }, 1000 * 60 / speed);
+let isReading = false;
+let words = [];
 
-  timerIntervalId = setInterval(() => {
-    updateTimer();
-  }, 1000); 
+function changeSpeed() {
+const speed = document.getElementById("speed").value;
+if (!isReading) {
+return;
+}
+clearInterval(intervalId);
+intervalId = setInterval(() => {
+if (currentIndex >= words.length) {
+currentIndex = 0;
+}
+document.getElementById("text").innerText = words[currentIndex++];
+wordCount++;
+document.getElementById("count").innerText = `Прочитано слов: ${wordCount}`;
+}, 1000 * 60 / speed);
+}
+
+function startReading() {
+const speed = document.getElementById("speed").value;
+words = texts[currentTextIndex].split(" ");
+currentIndex = 0;
+startTime = new Date();
+document.getElementById("start").disabled = true;
+document.getElementById("stop").disabled = false;
+isReading = true; // устанавливаем флаг isReading в true
+intervalId = setInterval(() => {
+if (currentIndex >= words.length) {
+currentIndex = 0;
+}
+document.getElementById("text").innerText = words[currentIndex++];
+wordCount++;
+document.getElementById("count").innerText = `Прочитано слов: ${wordCount}`;
+}, 1000 * 60 / speed);
+
+timerIntervalId = setInterval(() => {
+updateTimer();
+}, 1000);
+
+// добавляем обработчик события изменения значения ползунка скорости
+document.getElementById("speed").addEventListener("change", changeSpeed);
+
 }
 
 function stopReading() {
-  clearInterval(intervalId);
-  clearInterval(timerIntervalId); 
-  document.getElementById("start").disabled = false;
-  document.getElementById("stop").disabled = true;
-  updateTimer();
-  document.getElementById("count").innerText = `Прочитано слов: ${wordCount}`;
+clearInterval(intervalId);
+clearInterval(timerIntervalId);
+isReading = false; // устанавливаем флаг isReading в false
+document.getElementById("start").disabled = false;
+document.getElementById("stop").disabled = true;
 }
 
 function clearReading() {
-  clearInterval(intervalId);
-  clearInterval(timerIntervalId); 
-  clearInterval(countdownIntervalId);
-  document.getElementById("start").disabled = false;
-  document.getElementById("stop").disabled = true;
-  document.getElementById("text").innerText = "";
-  document.getElementById("count").innerText = "";
-  document.getElementById("timer").innerText = "Время: 0 секунд";
-  currentIndex = 0;
-  wordCount = 0;
-  startTime = new Date();
+clearInterval(intervalId);
+clearInterval(timerIntervalId);
+clearInterval(countdownIntervalId);
+document.getElementById("start").disabled = false;
+document.getElementById("stop").disabled = true;
+document.getElementById("text").innerText = "";
+document.getElementById("count").innerText = "";
+document.getElementById("timer").innerText = "Время: 0 секунд";
+currentIndex = 0;
+wordCount = 0;
+startTime = new Date();
 }
+
 
 async function selectText() {
   const group = document.createElement("div");

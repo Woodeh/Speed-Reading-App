@@ -188,13 +188,26 @@ body {
 
   .text-selector-button {
     color: black;
-    padding: 5px 48px;
+    padding: 5px 47px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     border-color: #17a2b8;
     background-color: white;
-    
   }
+
+  .text-selector-button:hover {
+    background-color:#17a2b8
+  }
+
+  .text-selector-button:nth-child(7),
+  .text-selector-button:nth-child(8),
+  .text-selector-button:nth-child(9),
+  .text-selector-button:nth-child(10),
+  .text-selector-button:nth-child(11) {
+    display: none;
+  }
+
+  
 
   #select-text {
     display: flex;
@@ -205,7 +218,7 @@ body {
   .modal {
     position: absolute;
     left: 77.06%;
-    top: 140.8%;
+    top: 162.8%;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -230,3 +243,54 @@ body {
       opacity: 0;
     }
   }
+
+
+
+  @media (max-width: 400px) {
+    .main-container {
+    width: 90%;
+    
+    margin: 0 auto;
+    padding-top: 50px;
+    box-shadow: none;
+    }
+    
+    .button-group {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .btn {
+    margin-bottom: 10px;
+    }
+    
+    #selected-text {
+    bottom: 10px;
+    }
+    
+    .text-container {
+    max-width: 90%;
+    min-height: 60px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0.5rem;
+    }
+    
+    .timer {
+    font-size: 1.2rem;
+    }
+    
+    .counter {
+    margin-top: 5px;
+    font-size: 20px;
+    }
+    }
+    
+    /* Общий медиазапрос для меньших экранов */
+    @media (max-width: 768px) {
+    .main-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    }
+    }

@@ -434,7 +434,7 @@ body {
 @media (max-width: 400px) {
   .modal-content {
     width: 77%; 
-    height: 90%; 
+    height: 895px; 
     margin: 5% auto; 
   }
   

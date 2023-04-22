@@ -255,20 +255,28 @@ body {
   @media (max-width: 400px) {
     .main-container {
     width: 90%;
-    
+    height: 600px;
     margin: 0 auto;
     padding-top: 50px;
     box-shadow: none;
     }
     
+body {
+  padding-top: 10px;
+}
+
+.description {
+  display: none;
+}
+
     .button-group {
     flex-direction: column;
     align-items: center;
     }
     
     .btn {
-    margin-bottom: 10px;
     width: 250px;
+    padding: 0px 0px;
     }
     
     #selected-text {

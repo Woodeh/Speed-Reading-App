@@ -347,7 +347,7 @@ body {
       border: 1px solid #888;
       width: 45%;
       height: 85%;
-      border-radius: 10px;
+      border-radius: 15px;
     }
     
     .close {
@@ -435,7 +435,7 @@ body {
   .modal-content {
     width: 77%; 
     height: 895px; 
-    margin: 5% auto; 
+     
   }
   
   .close {

@@ -123,23 +123,9 @@ body {
   
   /* Медиазапросы для адаптивности */
   
-  @media (max-width: 576px) {
-  .form-control {
-  max-width: 100%;
-  }
-  
-  .btn {
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  display: block;
-  width: 100%;
-  }
-  
-  .text-container {
-  min-height: 150px;
-  }
-  }
 
+  
+  
 
   .text-selector-button {
     color: black;

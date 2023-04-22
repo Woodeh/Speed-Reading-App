@@ -149,7 +149,7 @@ body {
 
   .text-selector-button {
     color: black;
-    width: 211px;
+    width: 180px;
     height: 50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -157,6 +157,7 @@ body {
     background-color: transparent; /* Прозрачный фон */
     cursor: pointer; /* Изменяем курсор при наведении */
     border-bottom: 1px solid black;
+    color: white;
   }
 
 
@@ -179,20 +180,23 @@ body {
   #select-text {
     display: flex;
     flex-direction: column;
-    color: black;
+    
   }
 
   .modal {
     position: absolute;
-    left: 539px;
-    top: 200px;
-    background-color: #fff;
+    left: 576px;
+    top: 192px;
+    background-color: #1c1d1f;
     border: 1px solid #ccc;
     box-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     text-align: center;
     transform: translate(-50%, -50%);
     z-index: 1;
+  /* border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+    
   }
 
   .description {
@@ -247,6 +251,7 @@ body {
     .modal {
       left: 175px;
       z-index: 2;
+      
     }
 
     .text-container {
@@ -435,9 +440,14 @@ body {
   background-color: rgb(40, 122, 58);
 }
 
-.btn:nth-child(2) {
+.btn:nth-child(3) {
   background-color: rgb(180, 44, 44);
 }
+
+.btn:nth-child(2) {
+  background-color: rgb(94, 94, 94);
+}
+
 
 
 
@@ -477,6 +487,7 @@ body {
   background-size: 400%;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  z-index: 2;
 }
 .stylish-btn:hover {
   background-position: 0;

@@ -319,6 +319,9 @@ body {
     margin: 0 auto;
     padding-top: 50px;
     }
+
+
+    
     }
 
 
@@ -422,4 +425,59 @@ body {
 
 .modal-description {
   line-height: 1.5;
+}
+
+
+
+
+
+@media (max-width: 400px) {
+  .modal-content {
+    width: 77%; 
+    height: 90%; 
+    margin: 5% auto; 
+  }
+  
+  .close {
+    font-size: 20px; 
+  }
+
+  .modal-list li {
+    font-size: 14px;
+  }
+  
+  .info-button {
+    font-size: 20px;
+    width: 25px; 
+    height: 25px;
+    top: 2px; 
+    left: 2px;
+  }
+  
+  .modal-content-image {
+    width: 87.5%; 
+    padding-bottom: 100%; 
+  }
+  
+  .guide-description {
+    margin-top: 0px; 
+    font-size: 12px; 
+  }
+  
+  .modal-description {
+    font-size: 14px; 
+  }
+}
+
+
+:root {
+  --icon-size-mobile: 10vw; 
+  --icon-color: white;
+  --icon-color-hover: white;
+  --icon-stroke: white;
+  --icon-stroke-hover: white;
+}
+
+.info-button {
+  font-size: var(--icon-size-mobile); 
 }

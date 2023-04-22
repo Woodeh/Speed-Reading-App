@@ -80,7 +80,7 @@ currentIndex = 0;
 startTime = new Date();
 document.getElementById("start").disabled = true;
 document.getElementById("stop").disabled = false;
-isReading = true; // устанавливаем флаг isReading в true
+isReading = true; //  флаг
 intervalId = setInterval(() => {
 if (currentIndex >= words.length) {
 currentIndex = 0;
@@ -94,9 +94,7 @@ timerIntervalId = setInterval(() => {
 updateTimer();
 }, 1000);
 
-// добавляем обработчик события изменения значения ползунка скорости
 document.getElementById("speed").addEventListener("change", changeSpeed);
-
 }
 
 function stopReading() {
@@ -149,7 +147,7 @@ async function selectText() {
     button.setAttribute("data-index", i);
     button.classList.add("text-selector-button");
     button.innerText = textTitles[i];
-    button.style.opacity = 0;
+    button.style.opacity = 1;
     group.appendChild(button);
     acc.push(button);
     return acc;
@@ -165,16 +163,7 @@ async function selectText() {
 
   toggleButton.parentNode.appendChild(modal);
 
-  let delay = 0;
-  for (let i = 0; i < buttons.length; i++) {
-    const button = buttons[i];
-    setTimeout(() => {
-      button.style.opacity = 1;
-    }, delay);
-    group.insertBefore(button, group.firstChild);
-    delay += 100;
-  }
-
+  
   toggleButton.disabled = true;
   document.getElementById("selected-text").innerText = "Выберите текст:";
 
@@ -216,3 +205,28 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("timer").innerText = "Время: 0 секунд";
 });
 
+
+
+
+const infoBtn = document.getElementById("info-button");
+const infoModal = document.getElementById("info-modal");
+
+// Получаем элемент для закрытия модального окна
+const closeBtn = infoModal.getElementsByClassName("close")[0];
+
+// Открываем модальное окно при клике на кнопку
+infoBtn.onclick = function() {
+  infoModal.style.display = "block";
+};
+
+// Закрываем модальное окно при клике на элемент закрытия
+closeBtn.onclick = function() {
+  infoModal.style.display = "none";
+};
+
+// Закрываем модальное окно при клике вне области модального окна
+window.onclick = function(event) {
+  if (event.target == infoModal) {
+    infoModal.style.display = "none";
+  }
+};

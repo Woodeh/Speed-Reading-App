@@ -123,7 +123,6 @@ startTime = new Date();
 async function selectText() {
   const group = document.createElement("div");
   group.setAttribute("id", "select-text");
-  
   const modal = document.createElement("div");
   const toggleButton = document.getElementById("toggle");
   modal.classList.add("modal");
@@ -136,7 +135,11 @@ async function selectText() {
       currentTextIndex = parseInt(button.getAttribute("data-index"), 10);
       modal.remove();
       clearReading();
-      document.getElementById("selected-text").innerText = "Выбран текст: " + textTitles[currentTextIndex];
+      document.getElementById("selected-text").innerText = "Загрузка...";
+      setTimeout(function() {
+        document.getElementById("selected-text").innerText = "Выбран текст: " + textTitles[currentTextIndex];
+      }, 1000);
+      
       toggleButton.disabled = false;
       group.removeEventListener("click", selectTextHandler); 
     }
@@ -167,6 +170,15 @@ async function selectText() {
   toggleButton.disabled = true;
   document.getElementById("selected-text").innerText = "Выберите текст:";
 
+  let delay = 0;
+  for (let i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    setTimeout(() => {
+      button.style.opacity = 1;
+    }, delay);
+    group.insertBefore(button, group.firstChild);
+    delay += 100;
+  }
 
 randomButton.addEventListener("click", async () => {
   try {
@@ -180,7 +192,9 @@ randomButton.addEventListener("click", async () => {
     modal.remove();
     clearReading();
     removePunctuation();
-    document.getElementById("selected-text").innerText = "Выбран текст: " + textTitles[currentTextIndex];
+    setTimeout(function() {
+      document.getElementById("selected-text").innerText = "Выбран текст: " + textTitles[currentTextIndex];
+    }, 1000);
     toggleButton.disabled = false;
   } catch (error) {
     console.error(error);
@@ -211,20 +225,18 @@ document.addEventListener("DOMContentLoaded", () => {
 const infoBtn = document.getElementById("info-button");
 const infoModal = document.getElementById("info-modal");
 
-// Получаем элемент для закрытия модального окна
+
 const closeBtn = infoModal.getElementsByClassName("close")[0];
 
-// Открываем модальное окно при клике на кнопку
 infoBtn.onclick = function() {
   infoModal.style.display = "block";
 };
 
-// Закрываем модальное окно при клике на элемент закрытия
+
 closeBtn.onclick = function() {
   infoModal.style.display = "none";
 };
 
-// Закрываем модальное окно при клике вне области модального окна
 window.onclick = function(event) {
   if (event.target == infoModal) {
     infoModal.style.display = "none";

@@ -1,0 +1,139 @@
+body {
+  background-image: url(/src/images/1619266616_19-phonoteka_org-p-fon-dlya-vaibera-kartinki-21.jpg);
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  background-position: center;
+  user-select: none;  /* блок выделения */
+}
+
+.main-container {
+  padding-top: 110px;
+  position: relative;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0px 0px 20px 5px rgba(64, 206, 253, 0.7);
+  border-radius: 15px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/src/images/background2.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  border: solid 2px white;
+}
+
+.logo {
+  background-image: url(/src/images/logo2.png);
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.title {
+  top: 35px;
+  left: -3px;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+#speed-label {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.hover-text {
+  font-weight: 600;
+}
+
+.form-control {
+  display: block;
+  margin: 0 auto;
+  width: 85px;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
+}
+
+.text-container {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  min-height: 80px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+.timer-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  font-size: 1.5rem;
+}
+
+.counter {
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.description {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.stat {
+  text-align: center;
+  position: absolute;
+  font-size: 18px;
+  bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+}
+
+

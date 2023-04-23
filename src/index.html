@@ -6,27 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/info-modal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/media.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat&display=swap"
+    rel="stylesheet">
 </head>
-<body>
 
-  
+<body>
   <div class="main-container">
+    <div class="logo"></div>
+    <div class="title">Speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Read</div>
     <div class="info-btn">
       <button id="info-button" class="info-button">ℹ</button>
       <div id="info-modal" class="info-modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>О приложении (beta)</h2>
-          <p class="modal-description">Это приложение было разработано для того, чтобы люди могли развивать свой навык скоростного чтения и уменьшить влияние такого явления, как "чтение внутренним голосом".</p>
+          <p class="modal-description">Это приложение было разработано для того, чтобы люди могли развивать свой навык
+            скоростного чтения и уменьшить влияние такого явления, как "чтение внутренним голосом".</p>
           <p>На данный момент доступны такие возможности, как:</p>
           <ul class="modal-list">
-            <li class="list">Выбор текста для чтения. Присутствуют заготовленные осмысленные тексты + возможность отображения случайных слов</li>
-            <li class="list">Изменение скорости воспроизведения слов в единице измерения WPM. Скорость можно изменять прямо во время работы приложения</li>
+            <li class="list">Выбор текста для чтения. Присутствуют заготовленные осмысленные тексты + возможность
+              отображения случайных слов</li>
+            <li class="list">Изменение скорости воспроизведения слов в единице измерения WPM. Скорость можно изменять
+              прямо во время работы приложения</li>
             <li class="list">Мониторинг количества уже прочитанных слов</li>
             <li class="list">Отслеживание прошедшего времени после запуска</li>
           </ul>
@@ -35,36 +42,43 @@
         </div>
       </div>
     </div>
-  <div class="form-group">
-     <label id="speed-label" for="speed">Скорость<span title="*WPM - Word Per Minute, что в переводе означает - Слово в минуту" class="hover-text">&nbsp;(WPM):</span></label><label id="speed-label" for="speed"></label>
-    <select id="speed" class="form-control">
-      <option value="100">100</option>
-      <option value="200">200</option>
-      <option value="300">300</option>
-      <option value="400">400</option>
-      <option value="500">500</option>
-      <option value="600">600</option>
-      <option value="700">700</option>
-      <option value="800">800</option>
-    </select>
-  </div>
-  
-  <div class="button-group">
-    <button id="start" class="btn btn-primary stylish-btn">Старт</button>
-    <button id="stop" class="btn btn-secondary stylish-btn">Стоп</button>
-    <button id="clear" class="btn btn-danger stylish-btn">Очистить</button>
-    <button id="toggle" class="btn btn-info stylish-btn">Выбрать текст</button>
-  </div>
-  <div id="selected-text">Сначала выберите текст</div>
-  <div id="text" class="text-container"></div>
-  
-  <div class="timer-group">
-    <span id="timer" class="timer">Время: 0 секунд</span>
-    <span id="count" class="counter"></span>
-  </div>
-  <div class="stat">Обычная скорость чтения на русском языке у взрослого человека лежит в пределах 120—180 слов в минуту</div>
-  <!-- <div class="description">*WPM - Word Per Minute, что в переводе означает - Слово в минуту</div> -->
-</div>
-</body>
-<script src="/src/script.js"></script>
-</html>
+    <div class="form-group">
+      <label id="speed-label" for="speed">Скорость<span
+          title="*WPM - Word Per Minute, что в переводе означает - Слово в минуту"
+          class="hover-text">&nbsp;WPM*</span></label><label id="speed-label" for="speed"></label>
+      <select id="speed" class="form-control">
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+        <option value="600">600</option>
+        <option value="700">700</option>
+        <option value="800">800</option>
+      </select>
+    </div>
+
+    <div class="button-group">
+      <button id="start" class="btn btn-primary stylish-btn">Старт</button>
+      <button id="stop" class="btn btn-secondary stylish-btn">Стоп</button>
+      <button id="clear" class="btn btn-danger stylish-btn">Очистить</button>
+      <button id="toggle" class="btn btn-info stylish-btn">Выбрать текст</button>
+    </div>
+    <div id="selected-text">Сначала выберите текст</div>
+    <div id="text" class="text-container"></div>
+    
+    <div class="timer-group">
+      <span id="timer" class="timer">Время: 0 секунд</span>
+      <span id="count" class="counter"></span>
+    </div>
+    <div class="stat">Обычная скорость чтения на русском языке у взрослого человека лежит в пределах 120-180 слов в
+      минуту</div>
+      <div class="copyright">Copyright © 2023 WoodyTHPS. All rights reserved</div>
+    </div>
+
+    
+    </body>
+    <script src="/src/script.js" type="module"></script>
+    <script src="/src/texts.js" type="module"></script>
+    
+    </html>

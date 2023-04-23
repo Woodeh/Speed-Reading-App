@@ -1,0 +1,107 @@
+@media (max-width: 700px) {
+
+  .main-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 650px;
+  }
+
+  .stat {
+    display: none;
+  }
+
+  body {
+    padding-top: 10px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .modal-content {
+    width: 77%;
+    height: 895px;
+
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
+  .modal-list li {
+    font-size: 14px;
+  }
+
+  .info-button {
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .modal-content-image {
+    width: 87.5%;
+    padding-bottom: 100%;
+  }
+
+  .guide-description {
+    margin-top: 0px;
+    font-size: 12px;
+  }
+
+  .modal-description {
+    font-size: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 250px;
+    padding: 10px 0px;
+  }
+
+  #selected-text {
+    bottom: 10px;
+  }
+
+  .text-selector-button {
+    width: 230px;
+  }
+
+  .btn:nth-child(1) {
+    z-index: 3;
+  }
+  .btn:nth-child(1) {
+    z-index: 7;
+  }
+
+  .btn:nth-child(4) {
+    z-index: 1;
+}
+
+
+  .modal {
+    left: 50%;
+  }
+
+  .text-container {
+    max-width: 90%;
+    min-height: 60px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0.5rem;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+
+  .counter {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+}

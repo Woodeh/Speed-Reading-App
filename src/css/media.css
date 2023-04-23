@@ -65,7 +65,7 @@
   }
 
   #selected-text {
-    bottom: 10px;
+    top: 60%;
   }
 
   .text-selector-button {

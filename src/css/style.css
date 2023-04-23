@@ -36,13 +36,15 @@ body {
 }
 
 .title {
-  top: 35px;
+  top: 30px;
   left: -3px;
   right: 0;
   margin: auto;
   position: absolute;
   text-align: center;
   font-weight: 600;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
 }
 
 
@@ -78,7 +80,6 @@ body {
 }
 
 .text-container {
-  margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -91,6 +92,7 @@ body {
   font-size: 25px;
   margin-bottom: 40px;
   background-color: white;
+  margin-top: 75px
 }
 
 .timer-group {

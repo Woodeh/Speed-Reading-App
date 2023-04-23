@@ -111,6 +111,7 @@ function clearReading() {
   document.getElementById("text").innerText = "";
   document.getElementById("count").innerText = "";
   document.getElementById("timer").innerText = "Время: 0 секунд";
+  document.getElementById("selected-text").innerText = "";
   currentIndex = 0;
   wordCount = 0;
   startTime = new Date();

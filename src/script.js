@@ -97,7 +97,7 @@ function startReading() {
 function stopReading() {
   clearInterval(intervalId);
   clearInterval(timerIntervalId);
-  isReading = false; // устанавливаем флаг isReading в false
+  isReading = false;
   document.getElementById("start").disabled = false;
   document.getElementById("stop").disabled = true;
 }
@@ -135,7 +135,7 @@ async function selectText() {
       setTimeout(function () {
         document.getElementById("selected-text").innerText =
           "Выбран текст: " + textTitles[currentTextIndex];
-      }, 1000);
+      }, 500);
 
       toggleButton.disabled = false;
       group.removeEventListener("click", selectTextHandler);
@@ -192,7 +192,7 @@ async function selectText() {
       setTimeout(function () {
         document.getElementById("selected-text").innerText =
           "Выбран текст: " + textTitles[currentTextIndex];
-      }, 1000);
+      }, 0);
       toggleButton.disabled = false;
     } catch (error) {
       console.error(error);

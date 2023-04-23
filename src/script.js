@@ -73,20 +73,24 @@ function startReading() {
   startTime = new Date();
   document.getElementById("start").disabled = true;
   document.getElementById("stop").disabled = false;
-  isReading = true; //  флаг
+  isReading = true;
+  timerIntervalId = setInterval(() => {
+    updateTimer();
+  }, 1000);
   intervalId = setInterval(() => {
     if (currentIndex >= words.length) {
-      currentIndex = 0;
+      clearInterval(intervalId);
+      clearInterval(timerIntervalId);
+      document.getElementById("start").disabled = false;
+      document.getElementById("stop").disabled = true;
+      isReading = false;
+      document.getElementById("text").innerText = "Вы прочитали текст до конца!";
+      return;
     }
     document.getElementById("text").innerText = words[currentIndex++];
     wordCount++;
     document.getElementById("count").innerText = `Прочитано слов: ${wordCount}`;
   }, (1000 * 60) / speed);
-
-  timerIntervalId = setInterval(() => {
-    updateTimer();
-  }, 1000);
-
   document.getElementById("speed").addEventListener("change", changeSpeed);
 }
 

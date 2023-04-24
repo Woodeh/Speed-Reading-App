@@ -33,6 +33,10 @@ function startGame() {
   wordTitle.style.display = "block";
   aboutId.style.display = "none";
   word.style.visibility = "visible";
+  textDiv.style.height = "300px";
+  textDiv.style.marginTop = "20px";
+  textDiv.style.paddingTop = "25px";
+
   const randomText = texts[Math.floor(Math.random() * texts.length)];
   words = randomText
     .toLowerCase()

@@ -25,13 +25,17 @@
   }
   
   #text {
+    position: relative;
     text-align: inherit;
-    left: 20px;
-    right: 20px; 
     line-height: 25px;
     margin-bottom: 20px;
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: table-cell;
+  vertical-align: middle;
+  top: 20px;
   }
 
   #startButton {
@@ -61,10 +65,43 @@
     background-size: 400%;
     -webkit-transition: 300ms ease-in-out;
     transition: 300ms ease-in-out;
-    z-index: 2;
+    
   }
 
   #startButton:hover {
+    background-position: 0;
+}
+
+#restartButton {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #1c1d1f;
+    border-radius: 0.6em;
+    cursor: pointer;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 800;
+    border: 2px solid white;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #64b4d8 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #64b4d8 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+}
+
+#restartButton:hover {
     background-position: 0;
 }
 
@@ -78,7 +115,7 @@ line-height: 25px;
 position: absolute;
 left: 0;
 right: 0;
-bottom: 90px;
+bottom: 43px;
 display: none;
 font-weight: 600;
 }
@@ -104,10 +141,12 @@ background-size: cover;
     display: flex;
     justify-content: space-evenly;
     background-color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 65px;
+    padding-bottom: 65px;
     margin-top: 20px;
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
   
+
+

@@ -11,6 +11,7 @@ const startButton = document.getElementById("startButton");
 const word = document.getElementById("word");
 const textDiv = document.getElementById("text");
 const scoreDiv = document.getElementById("score");
+const foundDiv = document.getElementById("foundDiv");
 const timerDiv = document.getElementById("timer");
 const restartButton = document.getElementById("restartButton");
 const wordTitle = document.getElementById("word-for-search");
@@ -25,7 +26,7 @@ let targetWordDiv;
 let score = 0;
 
 startButton.addEventListener("click", startGame);
-restartButton.addEventListener("click", () => location.reload());
+
 
 function startGame() {
   startButton.style.display = "none";
@@ -33,24 +34,21 @@ function startGame() {
   wordTitle.style.display = "block";
   aboutId.style.display = "none";
   word.style.visibility = "visible";
-  textDiv.style.height = "300px";
+  textDiv.style.height = "330px";
   textDiv.style.marginTop = "20px";
-  textDiv.style.paddingTop = "25px";
 
   const randomText = texts[Math.floor(Math.random() * texts.length)];
   words = randomText
-    .toLowerCase()
-    .replace(/[^a-zа-яё]+/g, " ")
+    .replace(/[^a-zA-Zа-яА-ЯёЁ]+/g, " ")
     .split(" ")
     .filter((word) => word.length >= 4);
   selectedWordIndex = Math.floor(Math.random() * words.length);
   const randomWord = words[selectedWordIndex];
   const textWithoutWord = randomText
-    .toLowerCase()
-    .replace(randomWord.toLowerCase(), "");
+    .replace(new RegExp(randomWord, "gi"), "");
   const text = randomText
     .replace(
-      randomWord.toLowerCase(),
+      new RegExp(randomWord, "gi"),
       `<span id='targetWord'>${randomWord}</span>`
     );
   textDiv.innerHTML = text;
@@ -72,8 +70,7 @@ function startGame() {
 
 function onTargetWordClick(event) {
   if (
-    event.target.innerText.toLowerCase() ===
-    words[selectedWordIndex].toLowerCase()
+    event.target.innerText === words[selectedWordIndex]
   ) {
     score++;
     scoreDiv.innerText = score;
@@ -82,21 +79,19 @@ function onTargetWordClick(event) {
     const randomWord = words[selectedWordIndex];
     const randomText = document.getElementById("text").innerText;
     const text = randomText
-      .toLowerCase()
       .replace(
-        randomWord.toLowerCase(),
+        new RegExp(randomWord, "gi"),
         `<span id='targetWord'>${randomWord}</span>`
       );
     textDiv.innerHTML = text;
     word.innerText = randomWord;
     targetWordDiv = document.getElementById("targetWord");
     targetWordDiv.addEventListener("click", onTargetWordClick);
+    
   }
 }
-
 function finishGame() {
-  word.style.visibility = "hidden";
-  timer.style.display = "none";
-  restartButton.style.display = "inline";
+  
   alert(`Игра закончена!\nНайдено слов: ${score}\n\nНажмите ОК для повтора.`);
+  location.reload(); // перезагрузка страницы
 }

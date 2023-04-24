@@ -124,7 +124,7 @@ body {
   text-align: center;
   position: absolute;
   font-size: 18px;
-  bottom: 100px;
+  bottom: 200px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -138,4 +138,11 @@ body {
   font-size: 10px;
 }
 
+.game-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 80px
+}
 

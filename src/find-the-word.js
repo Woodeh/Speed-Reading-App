@@ -27,7 +27,6 @@ let score = 0;
 
 startButton.addEventListener("click", startGame);
 
-
 function startGame() {
   startButton.style.display = "none";
   resultId.style.display = "block";
@@ -91,7 +90,6 @@ function onTargetWordClick(event) {
   }
 }
 function finishGame() {
-  
   alert(`Игра закончена!\nНайдено слов: ${score}\n\nНажмите ОК для повтора.`);
-  location.reload(); // перезагрузка страницы
+  location.reload();
 }

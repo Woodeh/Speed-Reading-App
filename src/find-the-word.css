@@ -46,7 +46,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #1c1d1f;
+    background-color: rgb(40, 122, 58);
     border-radius: 0.6em;
     cursor: pointer;
     align-self: center;
@@ -150,3 +150,35 @@ background-size: cover;
   
 
 
+.back-button {
+  color: white;
+  background: #64b4d8;
+  background-image: url(/src/images/back\ \(1\).png);
+  background-size: cover;
+  
+  font-size: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 2px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+  background: #eb4f26;
+  background-image: url(/src/images/back\ \(2\).png);
+  background-size: cover;
+  border: solid 2px;
+  opacity: 0.98;
+}

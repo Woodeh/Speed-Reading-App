@@ -105,3 +105,24 @@ table.addEventListener("click", function(e) {
     }
   }
 });
+
+
+
+const infoBtn = document.getElementById("info-button");
+const infoModal = document.getElementById("info-modal");
+const closeBtn = infoModal.getElementsByClassName("close")[0];
+
+
+infoBtn.onclick = function () {
+  infoModal.style.display = "block";
+};
+
+closeBtn.onclick = function () {
+  infoModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == infoModal) {
+    infoModal.style.display = "none";
+  }
+};

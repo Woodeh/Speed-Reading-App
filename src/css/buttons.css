@@ -121,31 +121,4 @@
     display: none;
 }
 
-.info-button {
-    color: var(--icon-color);
-    background: #64b4d8;
-    font-size: 25px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: solid 2px;
-    width: 37px;
-    height: 37px;
-    cursor: pointer;
-    opacity: 0.9;
-    transition: 0.2s;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.info-button:hover {
-    background: #eb4f26;
-    border: solid 2px;
-    opacity: 0.98;
-}
 

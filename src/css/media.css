@@ -1,9 +1,10 @@
 @media (max-width: 700px) {
 
   .main-container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     height: 650px;
+    border-radius: 0px;
   }
 
   .stat {
@@ -11,7 +12,8 @@
   }
 
   body {
-    padding-top: 10px;
+    padding-top: 0px;
+    margin: 0px
   }
 
   .description {
@@ -104,4 +106,10 @@
     margin-top: 5px;
     font-size: 20px;
   }
+
+  .kitty-image, .detective-image{
+    display: none;
+  }
+
 }
+

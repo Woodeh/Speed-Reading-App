@@ -6,7 +6,6 @@
     <title>Таблица Шульте</title>
     <link rel="stylesheet" href="/src/shulte-style.css">
     <link rel="shortcut icon" href="/src/images/logo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/find-the-word.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +16,22 @@
 
 <body>
     <div class="main-container">
+        <div class="back-button" onclick="location.href='/src/index.html'"></div>
+        <div id="menu">
+            <input type="checkbox" id="chekbox-burger">
+            <span id="button-burger"></span>
+            <nav>
+              <ul>
+                <li><a href="/src/index.html">Тест на скорость</a></li>
+          <li><a href="/src/find-the-word.html">Найди слово</a></li>
+          <li><a href="/src/shulte.html">Таблица Шульте</a></li>
+              </ul>      
+            </nav>    
+          </div> 
         <div class="logo"></div>
     <div class="title">Speed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Read</div>
     <h1 class="title-name">Таблица Шульте</h1>
+    <p class="shulte-description">Правила игры просты - нажимай на ячейки в правильном порядке. Увеличивай таблицу с помощью кнопок и испытывай свои возможности!</p>
     <div class="table-size-container">
         <label for="size-4"></label>
         <input type="radio" id="size-4" name="table-size" value="4" checked>
@@ -36,10 +48,11 @@
         <label for="size-8"></label>
         <input type="radio" id="size-8" name="table-size" value="8">
     </div>
-    <button id="restartButton">Restart</button>
+    <button id="restartButton"  class="stylish-btn">Restart</button>
     <table id="table"></table>
     <div id="timer"></div>
     <table id="table"></table>
+    <div class="copyright">Copyright © 2023 WoodyTHPS. All rights reserved</div>
     </div>
     <script src="/src/shulte-script.js"></script>
     </body>

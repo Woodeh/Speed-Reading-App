@@ -5,6 +5,9 @@ const size6Button = document.getElementById("size6-btn");
 const size7Button = document.getElementById("size7-btn");
 const size8Button = document.getElementById("size8-btn");
 let expectedNumber = 1;
+let gameStarted = false;
+let startTime;
+let currentSize = 4;
 
 function createTable(size) {
   const numbers = Array.from({length: size * size}, (_, i) => i + 1);
@@ -24,27 +27,35 @@ function createTable(size) {
   table.addEventListener("click", function(e) {
     const cell = e.target;
     if (cell.tagName === "TD" && !cell.classList.contains("highlight")) {
+      if (!gameStarted) { 
+        startTime = new Date().getTime(); 
+        gameStarted = true; 
+      }
       const selectedNumber = parseInt(cell.innerHTML);
       if (selectedNumber === expectedNumber) {
         cell.classList.add("highlight");
         expectedNumber++;
-        if (expectedNumber > size * size) {
-          alert("Поздравляем, вы выиграли!");
+        if (expectedNumber > table.querySelectorAll('td').length) {
+          const endTime = new Date().getTime(); 
+          const timeDiff = endTime - startTime; 
+          const seconds = Math.round(timeDiff / 1000);
+          alert("Ура! Вы справились с этой задачей! \nВремя вашей игры: " + seconds + " секунд"); 
         }
       } else {
         cell.classList.add("wrong");
-      setTimeout(() => {
-        cell.classList.remove("wrong");
-      }, 1000);
+        setTimeout(() => {
+          cell.classList.remove("wrong");
+        }, 1000);
       }
     }
   });
   
-  expectedNumber = 1; // обновляем переменную expectedNumber
+  expectedNumber = 1;
   const highlightedCells = table.querySelectorAll('.highlight');
   for (let i = 0; i < highlightedCells.length; i++) {
-    highlightedCells[i].classList.remove('highlight'); // сбрасываем выделение ячеек
+    highlightedCells[i].classList.remove('highlight'); 
   }
+  currentSize = size; // обновляем текущий размер доски
 }
 
 function shuffleArray(array) {
@@ -71,13 +82,8 @@ for (let i = 0; i < sizeRadios.length; i++) {
 }
 
 restartButton.addEventListener("click", function() {
-    clearTableAndCreateNewTable(5);
-});
-
-
-restartButton.addEventListener("click", function() {
-  table.innerHTML = "";
-  createTable(4);
+  clearTableAndCreateNewTable(currentSize); // передаем текущий размер доски
+  gameStarted = false;
 });
 
 window.onload = function() {
@@ -99,5 +105,3 @@ table.addEventListener("click", function(e) {
     }
   }
 });
-
-

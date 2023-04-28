@@ -181,3 +181,131 @@ body {
   font-weight: 600;
   color: black;
 }
+
+
+
+#menu {
+  display : block;
+  position : absolute;
+  right: 43px;
+    top: 5px;
+    
+}
+#menu nav {
+  position : absolute;
+  overflow:hidden;
+  top: 52px;
+    right: -43px;
+    
+}
+#menu ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transform: translateX(180px);
+  border-radius: 10px 0 0 10px;
+  transition: 0.5s;
+  opacity: 0;
+  transition: 0.5s;
+  border-width: 2px 0px 2px 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+#menu li {
+  display: block;
+  background-color: #1a1c1f;
+  color: #000;
+}
+#menu li:hover {
+  background-color : #64b4d8;
+}
+#menu li a {
+  display : block;
+  text-decoration : none;
+  color : #ffffff;
+  width : 150px;
+  height: 30px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+#menu input[type="checkbox"] {
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  cursor : pointer;
+  
+}
+
+#menu input {
+  display: block;
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  top : 2px;
+  -webkit-touch-callout: none;
+}
+
+#button-burger {
+  display : block;
+  width: 33px;
+  height: 4px;
+  position: absolute;  
+  background: #1c1d1f;
+  border-radius: 3px;
+  z-index: 1;
+  top : 20px;
+  transition : width 0.3s, background-color 0.3s;
+}
+
+#button-burger::before {
+  content : "";
+  display : block;
+  width: 33px;
+  height: 4px;
+  position: relative;  
+  background: #1c1d1f;
+  border-radius: 3px;
+  z-index: 1;
+  top : -11px;
+  transition : 0.3s;
+}
+
+#button-burger::after {
+  content : "";
+  display : block;
+  width: 33px;
+  height: 4px;
+  position: relative;  
+  background: #1c1d1f;
+  border-radius: 3px;
+  z-index: 1;
+  top : 7px;
+  transition : 0.3s;
+}
+
+#menu input:checked + #button-burger {
+  background-color : #1c1d1f;
+  width : 0;
+  transition : width 0.3s 0.1s, background-color 0.3s;
+  
+}
+#menu input:checked + #button-burger:before {
+  transform : translatey(11px) rotate(45deg);
+  
+}
+#menu input:checked + #button-burger:after {
+  transform : translatey(-11px) rotate(-45deg);
+}
+
+#menu input:checked ~ nav ul {
+  transform : none;
+  opacity : 1;
+  transition : transform 0.5s;
+  
+}

@@ -29,7 +29,7 @@
     margin: 3% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 45%;
+    width: 700px;
     height: 85%;
     border-radius: 15px;
   }
@@ -37,7 +37,7 @@
   .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
   }
   

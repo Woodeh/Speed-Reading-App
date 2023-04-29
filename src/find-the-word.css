@@ -134,7 +134,7 @@
 #result-container {
   text-align: center;
   line-height: 25px;
-  position: absolute;
+  margin-top: 30px;
   left: 0;
   right: 0;
   bottom: 43px;

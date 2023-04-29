@@ -182,15 +182,15 @@ td {
   margin: 3% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 45%;
-  height: 85%;
+  width: 700px;
+  max-height: 100%;
   border-radius: 15px;
 }
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -244,7 +244,7 @@ td {
   align-content: center;
   text-align: center;
   position: absolute;
-  top: 50px;
+  top: 3px;
   left: 3px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }

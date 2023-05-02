@@ -1,5 +1,5 @@
 body {
-  background-image: url(/src/images/1619266616_19-phonoteka_org-p-fon-dlya-vaibera-kartinki-21.jpg);
+  background-image: url(/images/1619266616_19-phonoteka_org-p-fon-dlya-vaibera-kartinki-21.jpg);
   background-repeat: no-repeat;
   padding-top: 80px;
   background-position: center;
@@ -17,13 +17,13 @@ body {
   border-radius: 15px;
   color: #333;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(/src/images/background2.jpg);
+  background-image: url(/images/background2.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
 }
 
 .logo {
-  background-image: url(/src/images/logo2.png);
+  background-image: url(/images/logo2.png);
   background-size: cover;
   width: 70px;
   height: 70px;
@@ -97,7 +97,7 @@ body {
 }
 
 .books-img {
-  background-image: url(/src/images/books2.png);
+  background-image: url(/images/books2.png);
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -107,7 +107,7 @@ body {
 }
 
 .books-img2 {
-  background-image: url(/src/images/books3.png);
+  background-image: url(/images/books3.png);
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -117,7 +117,7 @@ body {
 }
 
 .kitty {
-  background-image: url(/src/images/kitty.png);
+  background-image: url(/images/kitty.png);
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -185,21 +185,23 @@ body {
 
 
 #menu {
-  display : block;
-  position : absolute;
+  display: block;
+  position: absolute;
   right: 43px;
-    top: 5px;
-    z-index: 2; 
-    
-    
+  top: 5px;
+  z-index: 2;
+
+
 }
+
 #menu nav {
-  position : absolute;
-  overflow:hidden;
+  position: absolute;
+  overflow: hidden;
   top: 52px;
-    right: -43px;
-    
+  right: -43px;
+
 }
+
 #menu ul {
   list-style: none;
   overflow: hidden;
@@ -220,25 +222,27 @@ body {
   background-color: #1a1c1f;
   color: #000;
 }
+
 #menu li:hover {
-  background-color : #64b4d8;
+  background-color: #64b4d8;
 }
+
 #menu li a {
-  display : block;
-  text-decoration : none;
-  color : #ffffff;
-  width : 150px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  width: 150px;
   height: 30px;
   padding-left: 15px;
   padding-top: 5px;
 }
 
 #menu input[type="checkbox"] {
-  appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  cursor : pointer;
-  
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+
 }
 
 #menu input {
@@ -247,67 +251,69 @@ body {
   height: 30px;
   position: absolute;
   cursor: pointer;
-  opacity: 0; 
-  z-index: 2; 
-  top : 2px;
+  opacity: 0;
+  z-index: 2;
+  top: 2px;
   -webkit-touch-callout: none;
 }
 
 #button-burger {
-  display : block;
+  display: block;
   width: 33px;
   height: 4px;
-  position: absolute;  
+  position: absolute;
   background: #1c1d1f;
   border-radius: 3px;
   z-index: 1;
-  top : 20px;
-  transition : width 0.3s, background-color 0.3s;
+  top: 20px;
+  transition: width 0.3s, background-color 0.3s;
 }
 
 #button-burger::before {
-  content : "";
-  display : block;
+  content: "";
+  display: block;
   width: 33px;
   height: 4px;
-  position: relative;  
+  position: relative;
   background: #1c1d1f;
   border-radius: 3px;
   z-index: 1;
-  top : -11px;
-  transition : 0.3s;
+  top: -11px;
+  transition: 0.3s;
 }
 
 #button-burger::after {
-  content : "";
-  display : block;
+  content: "";
+  display: block;
   width: 33px;
   height: 4px;
-  position: relative;  
+  position: relative;
   background: #1c1d1f;
   border-radius: 3px;
   z-index: 1;
-  top : 7px;
-  transition : 0.3s;
+  top: 7px;
+  transition: 0.3s;
 }
 
-#menu input:checked + #button-burger {
-  background-color : #1c1d1f;
-  width : 0;
-  transition : width 0.3s 0.1s, background-color 0.3s;
-  
-}
-#menu input:checked + #button-burger:before {
-  transform : translatey(11px) rotate(45deg);
-  
-}
-#menu input:checked + #button-burger:after {
-  transform : translatey(-11px) rotate(-45deg);
+#menu input:checked+#button-burger {
+  background-color: #1c1d1f;
+  width: 0;
+  transition: width 0.3s 0.1s, background-color 0.3s;
+
 }
 
-#menu input:checked ~ nav ul {
-  transform : none;
-  opacity : 1;
-  transition : transform 0.5s;
-  
+#menu input:checked+#button-burger:before {
+  transform: translatey(11px) rotate(45deg);
+
+}
+
+#menu input:checked+#button-burger:after {
+  transform: translatey(-11px) rotate(-45deg);
+}
+
+#menu input:checked~nav ul {
+  transform: none;
+  opacity: 1;
+  transition: transform 0.5s;
+
 }

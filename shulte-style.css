@@ -1,8 +1,7 @@
-
 .title-name {
-text-align: center;
-font-size: 25px;
-margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
 .shulte-description {
@@ -10,117 +9,116 @@ margin-top: 10px;
 }
 
 table {
-    border-collapse: collapse;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 0px;
-    background: linear-gradient(145deg, #d5d5d5, #fefefe);
-    box-shadow:  18px 18px 36px #d8d8d8,
-                 -18px -18px 36px #ffffff;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0px;
+  background: linear-gradient(145deg, #d5d5d5, #fefefe);
+  box-shadow: 18px 18px 36px #d8d8d8,
+    -18px -18px 36px #ffffff;
 }
 
 td {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid black;
-    
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+
 }
 
 .highlight {
-    background-color: #71c5f4;
-    
+  background-color: #71c5f4;
+
 }
 
 .wrong {
-    background-color: #eb4f26;
+  background-color: #eb4f26;
 }
 
 .buttons-group {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px
 }
 
-#restartButton {
-}
+#restartButton {}
 
 
 
 .table-size-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.2em;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
 
-  /* Стили для радио-кнопок */
-  .table-size-container input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 1px solid #666666;
-    margin: 0 10px;
-    transition: all 0.3s ease;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .table-size-container input[type="radio"]:checked {
-    background-color: #64b4d8;
-    border-color: black;
-    
-  }
-  
-  .table-size-container label {
-    cursor: pointer;
-  }
+/* Стили для радио-кнопок */
+.table-size-container input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #666666;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  outline: none;
+  cursor: pointer;
+}
 
-  .stylish-btn {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: rgb(40, 122, 58);
-    border-radius: 0.6em;
-    cursor: pointer;
-    align-self: center;
-    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    padding: 10px 40px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: 800;
-    border: 2px solid white;
-    color: #fff;
-    background-image: -webkit-linear-gradient(45deg, #64b4d8 50%, transparent 50%);
-    background-image: linear-gradient(45deg, #64b4d8 50%, transparent 50%);
-    background-position: 100%;
-    background-size: 400%;
-    -webkit-transition: 300ms ease-in-out;
-    transition: 300ms ease-in-out;
+.table-size-container input[type="radio"]:checked {
+  background-color: #64b4d8;
+  border-color: black;
+
+}
+
+.table-size-container label {
+  cursor: pointer;
+}
+
+.stylish-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgb(40, 122, 58);
+  border-radius: 0.6em;
+  cursor: pointer;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+  border: 2px solid white;
+  color: #fff;
+  background-image: -webkit-linear-gradient(45deg, #64b4d8 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #64b4d8 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .stylish-btn:hover {
-    background-position: 0;
+  background-position: 0;
 }
 
 
 .back-button {
   color: white;
   background: #64b4d8;
-  background-image: url(/src/images/back\ \(1\).png);
+  background-image: url(/images/back\ \(1\).png);
   background-size: cover;
 
   font-size: 25px;
@@ -144,7 +142,7 @@ td {
 
 .back-button:hover {
   background: #eb4f26;
-  background-image: url(/src/images/back\ \(2\).png);
+  background-image: url(/images/back\ \(2\).png);
   background-size: cover;
   opacity: 0.98;
 }
@@ -203,7 +201,7 @@ td {
 
 
 .modal-content-image {
-  background-image: url(/src/images/guide.jpg);
+  background-image: url(/images/guide.jpg);
   width: 90.9%;
   padding-bottom: 51.55%;
   background-size: cover;
@@ -256,7 +254,7 @@ td {
 }
 
 .table-image {
-  background-image: url(/src/images/table.jpg);
+  background-image: url(/images/table.jpg);
   width: 200px;
   height: 200px;
   background-size: cover;

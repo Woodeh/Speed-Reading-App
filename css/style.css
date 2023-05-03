@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/1619266616_19-phonoteka_org-p-fon-dlya-vaibera-kartinki-21.jpg);
+  background-image: url(../images/1619266616_19-phonoteka_org-p-fon-dlya-vaibera-kartinki-21.jpg);
   background-repeat: no-repeat;
   padding-top: 80px;
   background-position: center;
@@ -17,13 +17,13 @@ body {
   border-radius: 15px;
   color: #333;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(/images/background2.jpg);
+  background-image: url(../images/background2.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
 }
 
 .logo {
-  background-image: url(/images/logo2.png);
+  background-image: url(../images/logo2.png);
   background-size: cover;
   width: 70px;
   height: 70px;
@@ -97,7 +97,7 @@ body {
 }
 
 .books-img {
-  background-image: url(/images/books2.png);
+  background-image: url(../images/books2.png);
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -107,7 +107,7 @@ body {
 }
 
 .books-img2 {
-  background-image: url(/images/books3.png);
+  background-image: url(../images/books3.png);
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -117,7 +117,7 @@ body {
 }
 
 .kitty {
-  background-image: url(/images/kitty.png);
+  background-image: url(../images/kitty.png);
   width: 50px;
   height: 50px;
   background-size: cover;

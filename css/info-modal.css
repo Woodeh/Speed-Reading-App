@@ -50,7 +50,7 @@
 
 
 .modal-content-image {
-  background-image: url(/images/guide.jpg);
+  background-image: url(../images/guide.jpg);
   width: 90.9%;
   padding-bottom: 51.55%;
   background-size: cover;

@@ -118,7 +118,7 @@ td {
 .back-button {
   color: white;
   background: #64b4d8;
-  background-image: url(/images/back\ \(1\).png);
+  background-image: url(../images/back\ \(1\).png);
   background-size: cover;
 
   font-size: 25px;
@@ -142,7 +142,7 @@ td {
 
 .back-button:hover {
   background: #eb4f26;
-  background-image: url(/images/back\ \(2\).png);
+  background-image: url(../images/back\ \(2\).png);
   background-size: cover;
   opacity: 0.98;
 }
@@ -201,7 +201,7 @@ td {
 
 
 .modal-content-image {
-  background-image: url(/images/guide.jpg);
+  background-image: url(../images/guide.jpg);
   width: 90.9%;
   padding-bottom: 51.55%;
   background-size: cover;
@@ -254,7 +254,7 @@ td {
 }
 
 .table-image {
-  background-image: url(/images/table.jpg);
+  background-image: url(../images/table.jpg);
   width: 200px;
   height: 200px;
   background-size: cover;

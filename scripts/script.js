@@ -1,4 +1,4 @@
-import {texts, textTitles} from './texts.js';
+import {texts, textTitles} from '../texts.js';
 
 let currentIndex = 0;
 let currentTextIndex = 0;

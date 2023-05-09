@@ -43,13 +43,11 @@ function startGame() {
     .filter((word) => word.length >= 4);
   selectedWordIndex = Math.floor(Math.random() * words.length);
   const randomWord = words[selectedWordIndex];
-  const textWithoutWord = randomText
-    .replace(new RegExp(randomWord, "gi"), "");
-  const text = randomText
-    .replace(
-      new RegExp(randomWord, "gi"),
-      `<span id='targetWord'>${randomWord}</span>`
-    );
+  const textWithoutWord = randomText.replace(new RegExp(randomWord, "gi"), "");
+  const text = randomText.replace(
+    new RegExp(randomWord, "gi"),
+    `<span id='targetWord'>${randomWord}</span>`
+  );
   textDiv.innerHTML = text;
   word.innerText = randomWord;
   scoreDiv.innerText = score;
@@ -68,25 +66,21 @@ function startGame() {
 }
 
 function onTargetWordClick(event) {
-  if (
-    event.target.innerText === words[selectedWordIndex]
-  ) {
+  if (event.target.innerText === words[selectedWordIndex]) {
     score++;
     scoreDiv.innerText = score;
     targetWordDiv.removeEventListener("click", onTargetWordClick);
     selectedWordIndex = Math.floor(Math.random() * words.length);
     const randomWord = words[selectedWordIndex];
     const randomText = document.getElementById("text").innerText;
-    const text = randomText
-      .replace(
-        new RegExp(randomWord, "gi"),
-        `<span id='targetWord'>${randomWord}</span>`
-      );
+    const text = randomText.replace(
+      new RegExp(randomWord, "gi"),
+      `<span id='targetWord'>${randomWord}</span>`
+    );
     textDiv.innerHTML = text;
     word.innerText = randomWord;
     targetWordDiv = document.getElementById("targetWord");
     targetWordDiv.addEventListener("click", onTargetWordClick);
-    
   }
 }
 function finishGame() {
